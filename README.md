@@ -3,38 +3,36 @@ Code for the paper “Mid-Long Term Drought Prediction Based on BVMD-Attention-G
 
 * Make sure the following files are present as per the directory structure before running the code：
 ```
-├── data
-|     ├── all-data (Meteorological data used in the experiment)
-|     │    ├── Urumqi1951-2020-data.csv
-|     │    ├── hanzhong1951-2020-data.csv
-|     │    ├── yanan1951-2020-data.csv
-|     │    ├── yulin1951-2020-data.csv
-├── models
-|    ├── bert-base-chinese
-|    |     ├── config.json
-|    |     ├── pytorch_model.bin
-|    |     └── vocab.txt
-|    ├── bert-base-uncased
-|    |     ├── config.json
-|    |     ├── pytorch_model.bin
-|    |     └── vocab.txt
-|    ├── config.py
-|    ├── data.py
-|    ├── data_process.py
-|    ├── layers.py
-|    ├── main.py
-|    ├── models.py
-|    ├── path_zh.py
-|    └── util.py   
-├── model_saved
-├── preprocess
-|    ├── getTextEmbedding.py
-|    ├── getTwittergraph.py
-|    ├── getWeibograph.py
-|    ├── pheme_pre.py
-|    ├── stop_words.txt
-|    └── weibo_pre.py
-└── requirement.txt
+├── BVMD-ABiGRU_Project
+|     └── data
+|          ├── all-data (Meteorological data used in the experiment)
+|          │    ├── Urumqi1951-2020-data.csv
+|          │    ├── hanzhong1951-2020-data.csv
+|          │    ├── yanan1951-2020-data.csv
+|          │    ├── yulin1951-2020-data.csv
+|     └── SPEI
+|          ├── program (SPEI calculation program)
+|          │    ├── spei.exe
+|          │    ├── spei_manual_en.pdf
+|     └── SPI
+|          ├── program (SPI calculation program)
+|          │    ├── DocumentFormat.OpenXml.dll
+|          │    ├── DocumentFormat.OpenXml.xml
+|          │    ├── SPIGenerator.exe
+|          │    ├── SPIGenerator.exe.config
+|          │    ├── SPIGenerator.pdb
+|          │    ├── SPIGenerator.xml
+|          │    ├── StandardPrecipitationIndex.dll
+|          │    ├── StandardPrecipitationIndex.pdb
+|     ├── bigru_attention.py
+|     ├── data_process.py
+|     ├── DWT.py
+|     ├── EEMD.py
+|     ├── main.py
+|     ├── mic.py
+|     ├── SampEntropy.py
+|     ├── util.py
+|     ├── vmdpy.py
 ```
 
 ## Dependencies
@@ -46,6 +44,4 @@ Code for the paper “Mid-Long Term Drought Prediction Based on BVMD-Attention-G
 * numpy==1.21.5
 * pandas==1.1.5
 * visdom==0.2.4
-* transformers==4.17.0
-* jieba==0.42.1
 
